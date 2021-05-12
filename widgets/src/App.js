@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Dropdown from './components/Dropdown';
+import Translate from './components/Translate';
 // import Accordion from './components/Accordion'
 // import Search from './components/Search'
 
@@ -14,11 +15,12 @@ const App = () => {
             {/* <Search /> */}
             <button onClick={()=>{setShowDropDown(!showDropdown)}}>Toggle</button>
             {showDropdown ?
-<Dropdown
-onSelectedChange={setSelected}
-selected={selected}
-options={options}/> : null
-            }
+                <Dropdown
+                    onSelectedChange={setSelected}
+                    selected={selected}
+                    options={options}/> : null
+                }
+            <Translate />
         </div>)
 }
 export default App
