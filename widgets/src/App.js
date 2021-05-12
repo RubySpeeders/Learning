@@ -7,14 +7,18 @@ import Dropdown from './components/Dropdown';
 const options = [{label: 'The Colour Red', value: 'red'}, {label: 'The Colour Green', value: 'green'}, {label: 'A Shade Blue', value: 'blue'}]
 const App = () => {
     const [selected, setSelected] = useState(options[0]);
+    const[showDropdown, setShowDropDown] = useState(true);
     return (
         <div>
             {/* <Accordion items={items} /> */}
             {/* <Search /> */}
-            <Dropdown
-            onSelectedChange={setSelected}
-            selected={selected}
-            options={options}/>
+            <button onClick={()=>{setShowDropDown(!showDropdown)}}>Toggle</button>
+            {showDropdown ?
+<Dropdown
+onSelectedChange={setSelected}
+selected={selected}
+options={options}/> : null
+            }
         </div>)
 }
 export default App
