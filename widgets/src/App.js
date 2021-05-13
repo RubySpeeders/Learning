@@ -8,18 +8,22 @@ import Translate from './components/Translate';
 const options = [{label: 'The Colour Red', value: 'red'}, {label: 'The Colour Green', value: 'green'}, {label: 'A Shade Blue', value: 'blue'}]
 const App = () => {
     const [selected, setSelected] = useState(options[0]);
-    const[showDropdown, setShowDropDown] = useState(true);
+    //code to show how to clean up adding and removing event listener on body
+    // const[showDropdown, setShowDropDown] = useState(true);
+
     return (
         <div>
             {/* <Accordion items={items} /> */}
             {/* <Search /> */}
-            <button onClick={()=>{setShowDropDown(!showDropdown)}}>Toggle</button>
-            {showDropdown ?
+            {/* <button onClick={()=>{setShowDropDown(!showDropdown)}}>Toggle</button> */}
+            {/* {showDropdown ? */}
                 <Dropdown
+                    label="Select a Colour"
                     onSelectedChange={setSelected}
                     selected={selected}
-                    options={options}/> : null
-                }
+                    options={options}/>
+                    {/* : null
+                } */}
             <Translate />
         </div>)
 }
