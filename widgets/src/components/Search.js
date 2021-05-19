@@ -19,6 +19,7 @@ const Search = () => {
                 }
             })
             setResults(data.query.search);
+            console.log(data.query)
         };
         
         if (term && !results.length) {
