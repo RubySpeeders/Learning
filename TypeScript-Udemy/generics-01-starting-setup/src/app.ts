@@ -86,5 +86,16 @@ return courseGoal as CourseGoal
 
 }
 
-const names = ['Mandy', 'Sarah'];
-names.push('Israel')
+const names: Readonly<string[]> = ['Mandy', 'Sarah'];
+// names.push('Israel');
+
+
+const nameObj = {name: "Sarah"}
+const hobbies = {hobbies: ["sleeping"]}
+
+const newObject = Object.assign({}, nameObj, hobbies)
+console.log(newObject === nameObj)
+
+
+const otherNewObject = {...nameObj, ...hobbies}
+console.log(otherNewObject)
