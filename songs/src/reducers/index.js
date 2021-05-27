@@ -4,10 +4,10 @@ const songs = () => {
   return [{ title: 'No Scrubs', duration: '4:05' },
   { title: 'Macarena', duration: '2:30' },
   { title: 'All Star', duration: '3:15' },
-  { title: 'I want It That Way', duration: '1:45' }]
+  { title: 'I Want It That Way', duration: '1:45' }]
 }
 
-const selectedSongs = (selectedSong = null, action) => {
+const selectedSong = (selectedSong = null, action) => {
   if (action.type === 'SONG_SELECTED') {
     return action.payload
   }
@@ -16,5 +16,5 @@ const selectedSongs = (selectedSong = null, action) => {
 
 export default combineReducers({
   songs,
-  selectedSongs
+  selectedSong
 })
