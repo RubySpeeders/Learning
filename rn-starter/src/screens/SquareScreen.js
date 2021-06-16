@@ -22,6 +22,8 @@ const SquareScreen = () => {
       case 'green':
         green + change > 255 || green + change < 0 ? null : setGreen(green + change)
         return
+      default:
+        return;
     }
 
   }
